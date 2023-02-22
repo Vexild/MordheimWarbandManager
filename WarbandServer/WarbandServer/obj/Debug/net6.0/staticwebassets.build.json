@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jwosIwRNqmcBYfLMRXiv2fl4fu6ZtZ3MIhF1uZ7PD44=",
+  "Source": "WarbandServer",
+  "BasePath": "_content/WarbandServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
