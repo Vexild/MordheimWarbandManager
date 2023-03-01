@@ -1,4 +1,4 @@
-﻿using WarbandServer.Models;
+﻿using WarbandServer.Models.User;
 
 namespace WarbandServer.Services
 {

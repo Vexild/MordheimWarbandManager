@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using WarbandServer.Models;
+using WarbandServer.Models.User;
 using WarbandServer.Services;
 
 namespace WarbandServer.Controllers

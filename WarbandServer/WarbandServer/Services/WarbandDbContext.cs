@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Xml.Linq;
-using WarbandServer.Models;
+using WarbandServer.Models.User;
 
 namespace WarbandServer.Services
 {
