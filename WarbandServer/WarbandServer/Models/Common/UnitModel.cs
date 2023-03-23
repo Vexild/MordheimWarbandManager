@@ -1,9 +1,9 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Diagnostics.CodeAnalysis;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WarbandServer.Models.Common
 {
-    public class UnitModel
+    public class Unit
     {
         public int Id { get; set; }
         [Required]
@@ -14,8 +14,11 @@ namespace WarbandServer.Models.Common
 
         public int StartingExp { get; set; }
 
-        // this requires table with Skillgroups. Use skill group IDs instead of strings.
-        public List<String> SkillGroups { get; set; } = new List<String>();
+        public bool CombatSkill { get; set; }
+        public bool ShootingSkill { get; set; }
+        public bool AcademicSkill { get; set; }
+        public bool StrengthSkill { get; set; }
+        public bool SpeedSkill { get; set; }
 
         public int Cost { get; set; }
 
@@ -74,7 +77,6 @@ namespace WarbandServer.Models.Common
         public int MaxAttacks { get; set; }
         [Range(1, int.MaxValue)]
         public int MaxLeaderShip { get; set; }
-
 
     }
 }

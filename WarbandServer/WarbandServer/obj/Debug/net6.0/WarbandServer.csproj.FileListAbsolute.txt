@@ -106,3 +106,4 @@ C:\Users\Vili Ahonen\source\repos\warband-manager\WarbandServer\WarbandServer\ob
 C:\Users\Vili Ahonen\source\repos\warband-manager\WarbandServer\WarbandServer\obj\Debug\net6.0\WarbandServer.pdb
 C:\Users\Vili Ahonen\source\repos\warband-manager\WarbandServer\WarbandServer\obj\Debug\net6.0\WarbandServer.genruntimeconfig.cache
 C:\Users\Vili Ahonen\source\repos\warband-manager\WarbandServer\WarbandServer\obj\Debug\net6.0\ref\WarbandServer.dll
+C:\Users\Vili Ahonen\source\repos\warband-manager\WarbandServer\WarbandServer\bin\Debug\net6.0\libman.json
