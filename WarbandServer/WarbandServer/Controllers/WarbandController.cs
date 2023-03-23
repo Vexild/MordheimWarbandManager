@@ -2,12 +2,14 @@
 using System.ComponentModel.DataAnnotations;
 using WarbandServer.Models;
 using WarbandServer.Repositories;
-using WarbandServer.Services;
+using WarbandServer.Repositories.Interfaces;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace WarbandServer.Controllers
 {
+    // These are depricated. Warbands should include warbands created by users, no default data. 
+    // TODO: Refactor the Warband model and reqork thse functions.
     [Route("api")]
     public class WarbandController : ControllerBase
     {

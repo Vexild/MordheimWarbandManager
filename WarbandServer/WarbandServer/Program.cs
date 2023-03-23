@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using WarbandServer.Repositories;
+using WarbandServer.Repositories.Interfaces;
 using WarbandServer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +10,9 @@ builder.Services.AddDbContext<WarbandContext>(options => options.UseNpgsql(
     @"Server=PostgreSQL 12;Host=localhost;Port=5432;Username=postgres;Password=root;Database=warband"));
 builder.Services.AddScoped<IWarbandRepository, WarbandRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUnitRepository, UnitRepository>();
+builder.Services.AddScoped<ISkillRepository, SkillRepository>();
+builder.Services.AddScoped<IFactionRepository, FactionRepository>();
 
 
 builder.Services.AddControllers();

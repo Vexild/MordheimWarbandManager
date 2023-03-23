@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using WarbandServer.Models.User;
-using WarbandServer.Services;
+using WarbandServer.Repositories.Interfaces;
 
 namespace WarbandServer.Controllers
 {
