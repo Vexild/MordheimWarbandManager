@@ -5,7 +5,7 @@ using WarbandServer.Repositories.Interfaces;
 
 namespace WarbandServer.Controllers
 {
-    [Route("Api")]
+    [Route("api")]
     public class FactionController : ControllerBase
     {
         private readonly IFactionRepository _factionRepository;
@@ -14,14 +14,14 @@ namespace WarbandServer.Controllers
             _factionRepository = factionRepository;
         }
 
-        [HttpGet("/faction")]
+        [HttpGet("faction")]
         public IActionResult Get()
         {
             List<Faction> list = _factionRepository.GetAllFactions();
             return Ok(list);
         }
 
-        [HttpGet("/faction/{id}")]
+        [HttpGet("faction/{id}")]
         public IActionResult Get(int id)
         {
             Faction faction = _factionRepository.GetFaction(id);

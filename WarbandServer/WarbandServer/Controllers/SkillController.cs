@@ -4,7 +4,7 @@ using WarbandServer.Repositories.Interfaces;
 
 namespace WarbandServer.Controllers
 {
-    [Route("Api")]
+    [Route("api")]
     public class SkillController : ControllerBase
     {
         private readonly ISkillRepository _skillRepository;
@@ -13,14 +13,14 @@ namespace WarbandServer.Controllers
             _skillRepository = skillRepository;
         }
 
-        [HttpGet("/skill")]
+        [HttpGet("skill")]
         public IActionResult Get()
         {
             List<Skill> list = _skillRepository.GetAllSkills();
             return Ok(list);
         }
 
-        [HttpGet("/skill/{id}")]
+        [HttpGet("skill/{id}")]
         public IActionResult Get(int id)
         {
             Skill skill = _skillRepository.GetSkill(id);

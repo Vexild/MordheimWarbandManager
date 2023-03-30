@@ -533,7 +533,7 @@ namespace WarbandServer.Migrations
                         new
                         {
                             Id = 1,
-                            Joined = new DateTime(2023, 3, 22, 14, 14, 46, 257, DateTimeKind.Utc).AddTicks(8142),
+                            Joined = new DateTime(2023, 3, 28, 10, 48, 23, 277, DateTimeKind.Utc).AddTicks(1747),
                             Mail = "testmail1.com",
                             Name = "Test User 1",
                             Pass = "Non-hashed-password1",
@@ -542,7 +542,7 @@ namespace WarbandServer.Migrations
                         new
                         {
                             Id = 2,
-                            Joined = new DateTime(2023, 3, 22, 14, 14, 46, 257, DateTimeKind.Utc).AddTicks(8145),
+                            Joined = new DateTime(2023, 3, 28, 10, 48, 23, 277, DateTimeKind.Utc).AddTicks(1749),
                             Mail = "testmail2.com",
                             Name = "Test User 2",
                             Pass = "Non-hashed-password2",

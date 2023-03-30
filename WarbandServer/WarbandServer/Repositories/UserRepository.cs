@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using WarbandServer.Models;
 using WarbandServer.Models.User;
 using WarbandServer.Repositories.Interfaces;
 using WarbandServer.Services;
@@ -16,8 +17,7 @@ namespace WarbandServer.Repositories
 
         public User GetUser(int id)
         {
-            var user = _context.User.FirstOrDefault(c => c.Id == id);
-            return user;
+            return _context.User.FirstOrDefault(c => c.Id == id);
         }
 
         public List<User> GetUsers() =>
@@ -25,7 +25,6 @@ namespace WarbandServer.Repositories
 
         public void AddUser(User user)
         {
-
             _context.User.Add(user);
             _context.SaveChanges();
         }
@@ -46,6 +45,13 @@ namespace WarbandServer.Repositories
         {
             _context.User.Remove(GetUser(id));
             _context.SaveChanges();
+        }
+
+        public List<Warband> GetUserWarbands(int id)
+        {
+            List<Warband> listOfWarbands = new List<Warband>();
+            listOfWarbands.Add(new Warband() { Id = 1, Name = "Middleheims mercs", Credits = 130, Rating = 100 });
+            return listOfWarbands;
         }
     }
 }
