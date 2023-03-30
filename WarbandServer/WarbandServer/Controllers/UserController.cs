@@ -82,7 +82,7 @@ namespace WarbandServer.Controllers
             }
         }
 
-        [HttpPost("login")]
+       /*[HttpPost("login")]
         public IActionResult Post(User user)
         {
             if(user == null)
@@ -95,6 +95,6 @@ namespace WarbandServer.Controllers
                 // 
                 return Ok(user);
             }
-        }
+        }*/
     }
 }

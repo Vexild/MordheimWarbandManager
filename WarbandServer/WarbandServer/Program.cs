@@ -3,12 +3,12 @@ using WarbandServer.Repositories;
 using WarbandServer.Repositories.Interfaces;
 using WarbandServer.Services;
 
-var builder = WebApplication.CreateBuilder(args);
 
+var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 // TODO move this to safe
 builder.Services.AddDbContext<WarbandContext>(options => options.UseNpgsql(
-    @"Server=PostgreSQL 12;Host=localhost;Port=5432;Username=postgres;Password=root;Database=warband"));
+    @"Server="+builder.Configuration["Server"]+";Host="+builder.Configuration["Host"]+";Port="+builder.Configuration["Port"]+";Username="+builder.Configuration["Host"]+";Port="+builder.Configuration["Port"]+ ";Password=" + builder.Configuration["Password"] + ";Database=" + builder.Configuration["Database"]));
 builder.Services.AddScoped<IWarbandRepository, WarbandRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUnitRepository, UnitRepository>();
