@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using WarbandServer.Models;
 using WarbandServer.Models.User;
@@ -82,19 +83,19 @@ namespace WarbandServer.Controllers
             }
         }
 
-       /*[HttpPost("login")]
-        public IActionResult Post(User user)
+        [HttpPost("login")]
+        public IActionResult Post(string password, string username)
         {
-            if(user == null)
+            if(username == null || password == null)
             {
                 return BadRequest();
             }
             else
             {
                 // creater Authentication token here
-                // 
+                
                 return Ok(user);
             }
-        }*/
+        }
     }
 }
