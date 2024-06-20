@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using WarbandServer.Models;
 using WarbandServer.Models.User;
+using WarbandServer.Repositories;
 using WarbandServer.Repositories.Interfaces;
 
 namespace WarbandServer.Controllers
@@ -11,12 +13,13 @@ namespace WarbandServer.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
+        private readonly IConfiguration _configuration;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUserRepository userRepository, IConfiguration configuration)
         {
             _userRepository = userRepository;
+            _configuration = configuration;
         }
-
 
         [HttpGet("user")]
         public IActionResult Get()
@@ -31,7 +34,7 @@ namespace WarbandServer.Controllers
         }
 
         [HttpGet("user/{id}")]
-        public IActionResult Get(int id)
+        public IActionResult GetUser(int id)
         {
             User user = _userRepository.GetUser(id);
             if (user == null)
@@ -42,7 +45,7 @@ namespace WarbandServer.Controllers
         }
 
         [HttpPost("user")]
-        public IActionResult Post(User user)
+        public IActionResult PostUser(User user)
         {
             if (user == null)
             {
@@ -56,7 +59,7 @@ namespace WarbandServer.Controllers
         }
 
         [HttpDelete("user")]
-        public IActionResult Delete(int id) 
+        public IActionResult DeleteUser(int id) 
         {
             if(id == 0)
             {
@@ -70,7 +73,7 @@ namespace WarbandServer.Controllers
         }
 
         [HttpPut("user")]
-        public IActionResult Put(User user)
+        public IActionResult PutUser(User user)
         {
             if(user == null)
             {
@@ -83,18 +86,22 @@ namespace WarbandServer.Controllers
             }
         }
 
+
         [HttpPost("login")]
-        public IActionResult Post(string password, string username)
+        public IActionResult LoginUser(string userName, string password)
         {
-            if(username == null || password == null)
+            if (userName == null || password == null)
             {
                 return BadRequest();
             }
             else
             {
-                // creater Authentication token here
-                
-                return Ok(user);
+                var key = _userRepository.Authenticate(userName, password);
+                if (key == null) 
+                {
+                    return BadRequest();
+                }
+                return Ok(key);
             }
         }
     }

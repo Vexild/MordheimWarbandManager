@@ -35,6 +35,5 @@ namespace WarbandServer.Repositories
         {
             Warbands = Warbands.Select(c => c.Id == id ? c : modifiedWarband).ToList();
         }
-
     }
 }

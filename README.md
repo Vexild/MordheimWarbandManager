@@ -1,9 +1,9 @@
-# Warband Manager
+# Mordheim Warband Manager
 
 
-## What is Warband Manager?
+## What is Mordheim Warband Manager?
 
-Warband Manager is a warband roster manager for Mordheim. It's purpouse is to fill a lack of easy to use roster builder for Mordheim and as an introduction for me to ASP.NET framework. My goal is to publish this application for a small group in the future and keep it free. All data used for rosters are gathered from the internet, since the game support has been canceled years ago.
+Mordheim Warband Manager is a warband roster manager for Mordheim skirmish miniature game. It's purpouse is to fill a lack of easy to use roster builder for Mordheim and as an introduction for me to ASP.NET framework. My goal is to publish this application for a small group in the future and keep it free. All data used for rosters are gathered from the internet, since the game support has been canceled years ago.
 
 
 Warband Manager supports local-rosters and signed in rosters, to make roster building easy for everyone. Web site will include all official rules for mordheim and supports a campaing managing for multiple users. Manager will not include functionality from within the game, so no dice rollers or radomizers of any kind are available (let the players roll the dice). 

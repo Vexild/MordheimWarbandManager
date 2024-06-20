@@ -533,19 +533,19 @@ namespace WarbandServer.Migrations
                         new
                         {
                             Id = 1,
-                            Joined = new DateTime(2023, 3, 28, 10, 48, 23, 277, DateTimeKind.Utc).AddTicks(1747),
+                            Joined = new DateTime(2023, 4, 25, 11, 39, 5, 128, DateTimeKind.Utc).AddTicks(8205),
                             Mail = "testmail1.com",
                             Name = "Test User 1",
-                            Pass = "Non-hashed-password1",
+                            Pass = "Non-hashed-password",
                             PrivateUser = false
                         },
                         new
                         {
                             Id = 2,
-                            Joined = new DateTime(2023, 3, 28, 10, 48, 23, 277, DateTimeKind.Utc).AddTicks(1749),
+                            Joined = new DateTime(2023, 4, 25, 11, 39, 5, 128, DateTimeKind.Utc).AddTicks(8208),
                             Mail = "testmail2.com",
                             Name = "Test User 2",
-                            Pass = "Non-hashed-password2",
+                            Pass = "$2a$11$LGCaScS6YtxBQfielNrpQ.2dr/knhugCB46Po.IqXppjlypwxuKwy",
                             PrivateUser = false
                         });
                 });

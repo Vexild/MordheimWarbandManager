@@ -13,6 +13,7 @@ namespace WarbandServer.Models.User
         [Required]
         [MaxLength(255)]
         public string Pass { get; set; }
+        [Required]
         [MaxLength(255)]
         public string Mail { get; set; }
         [DefaultValue(false)]

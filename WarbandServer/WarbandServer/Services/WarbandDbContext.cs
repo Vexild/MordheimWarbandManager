@@ -17,9 +17,10 @@ namespace WarbandServer.Services
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Dummy data
+            string hashedPassword = PasswordHasher.HashPassword("Hashed-password");
             modelBuilder.Entity<User>().HasData(
-                new User { Id = 1, Name = "Test User 1", Pass = "Non-hashed-password1", Mail = "testmail1.com" },
-                new User { Id = 2, Name = "Test User 2", Pass = "Non-hashed-password2", Mail = "testmail2.com" }
+                new User { Id = 1, Name = "Test User 1", Pass = "Non-hashed-password", Mail = "testmail1.com" },
+                new User { Id = 2, Name = "Test User 2", Pass = hashedPassword, Mail = "testmail2.com" }
                 );
 
             modelBuilder.Entity<Faction>().HasData(
